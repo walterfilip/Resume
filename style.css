@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
@@ -25,9 +25,15 @@ header{
     z-index: 1000;
 
 }
+.logo span{
+font-family: 'Nabla', sans-serif;
+    font-weight: 600;
+}
 .logo{
+   
     color: blanchedalmond;
-    font-size: 1.3rem;
+   
+    font-size: 1.9rem;
     font-weight: 400;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
@@ -35,6 +41,7 @@ header{
 .logo:hover{
     transform: scale(1.1);
     color: greenyellow;
+    text-shadow: 0 0 15px lightgreen;
 }
 .nav-links{
     display: flex;
