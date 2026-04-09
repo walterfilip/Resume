@@ -2,11 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Walter Turncoat', sans-serif;
+    font-weight: 400;
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
+    
 
+}
+body{
+    background-color: rgba(33, 107, 23, 0.486);
+     
 }
 header{
     position: fixed;
@@ -17,8 +23,9 @@ header{
     align-items: center;
     justify-content: center;
     gap: 5rem;
-    background-color: darkgrey;
-    backdrop-filter: blur(8px);
+    background-color: black;
+    opacity: 80%;
+   
     color: yellow;
     padding: 0.5rem 1.5rem;
     border-radius: 3rem;
@@ -26,43 +33,46 @@ header{
 
 }
 .logo span{
-font-family: 'Nabla', sans-serif;
+    font-family: 'Walter Turncoat', sans-serif;
     font-weight: 600;
 }
-.logo{
-   
-    color: blanchedalmond;
-   
+.logo{   
+    color: rgb(45, 179, 116);
     font-size: 1.9rem;
     font-weight: 400;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
 }
 .logo:hover{
-    transform: scale(1.1);
-    color: greenyellow;
-    text-shadow: 0 0 15px lightgreen;
+    transform: scale(1.05);
+    color: black;
+    text-shadow: 0 0 3px lightgreen;
 }
-.nav-links{
+.nav-links{    
     display: flex;
-    gap: 2rem;
-   
+    gap: 2rem;   
 }
 li a{
     position: relative;
-    color: green;
+    color: lightgreen;
     font-weight: 300;
+}
+li:hover{
+    transform: scale(1.07);
+     text-shadow: 0 0 15px lightgreen;
+   
 }
 li a::before{
     position: absolute;
     content: '';
     width: 0;
     left: 0;
-    height: 5px;
-    top: 25px;
+    height: 1px;
+    top: 20px;
     border-radius: 1rem;
     transition: 0.3s ease-in-out;
-    background: linear-gradient(to right, blue, green);
+    background: linear-gradient(to right, rgb(45, 179, 116), lightgreen);
+    
 
 }
 li a:hover::before{
@@ -75,7 +85,7 @@ li a:hover::before{
     border: none;
     font-weight: 500;
     font-size: 1rem;
-    color: rgb(148, 130, 26);
+    color: lightgreen(89, 64, 204);
     background-color: blueviolet;
     text-wrap: nowrap;
     transition: 0.3s ease-in-out;
@@ -89,8 +99,10 @@ li a:hover::before{
     transform: scale(1.03);
 }
 #menu-icon{
-    font-size: 2rem;
+    font-size: 1.4rem;
     display: none;
+    color: lightgreen;
+    
 }
 section{
     min-height: 100vh;
@@ -149,6 +161,8 @@ section{
     font-weight: 500;
     text-wrap: nowrap;
     transition: 0.2s ease-in-out;
+    text-decoration: none;
+    color: inherit;
 }
 .btn:hover{
     background-color: black;
@@ -353,7 +367,7 @@ footer ul li a{
         padding: 1rem 1rem;        
     }
     header .logo{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     header .visit-btn{
         display: none;
@@ -383,26 +397,48 @@ footer ul li a{
 @media(max-width:600px){
     header #menu-icon{
         display: block;
+        cursor: pointer;
+    }
+    header #menu-icon:active{
+        display: block;
     }
     .nav-links{
-        position: absolute;
+    /*     position: absolute;
         top: 100%;
-        margin-top: 1rem;
-        width: 100%;
+        margin-top: 0.1rem;
         padding: 1rem;
         font-size: larger;
         color: lightgreen;
         display: flex;
         flex-direction: column;
         text-align: center;
-        background-color: transparent;
+        left: 290px;
+        background-color: lightgreen;
         backdrop-filter: blur(10px);
         border-radius: 2rem;
         display: none;
+        */
+        position: absolute;
+        top: 105%;
+        right: 0;
+        background-color: black;
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-height: 0;          
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        width: 200px;
+        
     }
+    .nav-links.active{
+    max-height: 200px;     
+}
+   
     .nav-links li{
-        margin-top: 1.5rem;
-        padding: 1rem;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
     }
     .nav-links.active{
         display: block;
@@ -413,7 +449,7 @@ footer ul li a{
 
     }
     header .logo{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     .about-container img{
         width: 80vw;
@@ -429,4 +465,15 @@ footer ul li a{
     footer ul{
         gap: 1rem;
     }
+}
+#mario {
+ position: fixed;
+  top: 110px;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.2s linear;
+  
 }
