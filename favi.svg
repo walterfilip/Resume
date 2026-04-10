@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+   
+ <rect width="100" height="100" fill=" rgb(29, 44, 28))"  />
+  <text x="50" y="65" font-size="60" text-anchor="middle" fill="lightgreen" font-family="">
+    FW
+  </text>
+</svg>

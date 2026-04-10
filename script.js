@@ -32,7 +32,7 @@ window.addEventListener("scroll", () => {
   const maxScroll = document.body.scrollHeight - window.innerHeight;
   
   const progress = scrollTop / maxScroll;
-  const maxX = window.innerWidth - 100; // så han inte försvinner
+  const maxX = window.innerWidth - 100; 
   
   const moveX = progress * maxX;
   const rotation = progress * 720;
